@@ -20,6 +20,13 @@ namespace CVEntityProje
 
             Repeater3.DataSource = db.TBLHAKKIMDA.ToList();
             Repeater3.DataBind();
+
+            Repeater4.DataSource = db.TBLRESIM.ToList();
+            Repeater4.DataBind();
+
+            Repeater5.DataSource = db.TBLRESIM.ToList();
+            Repeater5.DataBind();
+
         }
     }
 }

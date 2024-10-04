@@ -40,13 +40,15 @@
           <Property Name="MAIL" Type="varchar" MaxLength="50" />
           <Property Name="MESAJ" Type="varchar" MaxLength="500" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'DbCvEntity.dbo.TBLRESİM' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="TBLRESİM">
-          <Property Name="ID" Type="tinyint" />
+        <EntityType Name="TBLRESIM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IMAGE" Type="varchar" MaxLength="500" />
-          <Property Name="ACIKLAMA" Type="varchar" MaxLength="50" />
-        </EntityType>-->
+          <Property Name="BASLIK" Type="varchar" MaxLength="25" />
+          <Property Name="ACIKLAMA" Type="varchar" MaxLength="1000" />
+        </EntityType>
         <EntityType Name="TBLYETENEKLER">
           <Key>
             <PropertyRef Name="ID" />
@@ -60,6 +62,7 @@ warning 6013: The table/view 'DbCvEntity.dbo.TBLRESİM' does not have a primary 
           <EntitySet Name="TBLCALISMALARIM" EntityType="Self.TBLCALISMALARIM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLHAKKIMDA" EntityType="Self.TBLHAKKIMDA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLILETISIM" EntityType="Self.TBLILETISIM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLRESIM" EntityType="Self.TBLRESIM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLYETENEKLER" EntityType="Self.TBLYETENEKLER" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -115,7 +118,17 @@ warning 6013: The table/view 'DbCvEntity.dbo.TBLRESİM' does not have a primary 
           <EntitySet Name="TBLHAKKIMDA" EntityType="Self.TBLHAKKIMDA" />
           <EntitySet Name="TBLILETISIM" EntityType="Self.TBLILETISIM" />
           <EntitySet Name="TBLYETENEKLER" EntityType="Self.TBLYETENEKLER" />
+          <EntitySet Name="TBLRESIM" EntityType="DbCvEntityModel.TBLRESIM" />
         </EntityContainer>
+        <EntityType Name="TBLRESIM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IMAGE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="BASLIK" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -167,6 +180,16 @@ warning 6013: The table/view 'DbCvEntity.dbo.TBLRESİM' does not have a primary 
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="YETENEK" ColumnName="YETENEK" />
                 <ScalarProperty Name="DERECE" ColumnName="DERECE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLRESIM">
+            <EntityTypeMapping TypeName="DbCvEntityModel.TBLRESIM">
+              <MappingFragment StoreEntitySet="TBLRESIM">
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="BASLIK" ColumnName="BASLIK" />
+                <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

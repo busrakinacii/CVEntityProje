@@ -161,43 +161,35 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- //services -->
         <!-- news -->
         <div class="news" id="news">
-            <h3 class="w3_head mb-4 text-left">DENEYİMLERİM</h3>
-            <p class="iner mt-md-5 text-left">
+             <h3 class="w3_head mb-7">Deneyimlerim</h3>
+            <p class="iner mt-md-3 text-left">
                 <asp:Repeater ID="Repeater3" runat="server">
                     <ItemTemplate>
                         <%#Eval("ISDENEYIMLERI") %>
                     </ItemTemplate>
                 </asp:Repeater>
             </p>
-            <div class="row news-grids-left mt-5">
-                <div class="col-lg-5 news_top">
-                    <img src="images/g1.jpg" alt="news image" class="img-fluid">
+            <div class="row news-grids-middle mt-7">
+                <div class="col-lg-3">
+                    <asp:Repeater ID="Repeater4" runat="server">
+                        <ItemTemplate>
+                            <img src=<%#Eval("IMAGE") %> alt="news image" class="img-fluid"><br />
+                        </ItemTemplate>
+                    </asp:Repeater>
                 </div>
-                <div class="col-lg-7 news_top1">
-                    <h5>Nulla pellentesque</h5>
-                    <p class="mt-3">Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-                </div>
-            </div>
-            <div class="row news-grids-middle">
-                <div class="col-lg-5 news_top">
-                    <img src="images/g2.jpg" alt="news image" class="img-fluid">
-                </div>
-                <div class="col-lg-7 news_top1">
-                    <h5>Nulla pellentesque</h5>
-                    <p class="mt-3">Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-                </div>
-            </div>
-            <div class="row news-grids-right">
-                <div class="col-lg-5 news_top">
-                    <img src="images/g3.jpg" alt="news image" class="img-fluid">
-                </div>
-                <div class="col-lg-7 news_top1">
-                    <h5>Nulla pellentesque</h5>
-                    <p class="mt-3">Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+                <div class="col-lg-9">
+                    <asp:Repeater ID="Repeater5" runat="server">
+                        <ItemTemplate>
+                            <h5><%#Eval("BASLIK") %><br /></h5>
+                            <p class="mt-3">
+                              <br />  <%#Eval("ACIKLAMA") %>
+                            </p>
+                        </ItemTemplate>
+                    </asp:Repeater>
                 </div>
             </div>
-
         </div>
+     <%--   <h5 class="w3_head mb-2">Eğitim kıvılcımla ateş yakmaktır.</h5>--%>
         <!-- //news -->
         <!-- contact -->
         <section class="wedo" id="contact">
