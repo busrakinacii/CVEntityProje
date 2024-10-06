@@ -27,6 +27,14 @@ namespace CVEntityProje
             Repeater5.DataSource = db.TBLRESIM.ToList();
             Repeater5.DataBind();
 
+            Repeater6.DataSource = db.TBLYETENEKLER.ToList();
+            Repeater6.DataBind();
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+             
         }
     }
 }

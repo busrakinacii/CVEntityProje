@@ -70,7 +70,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ItemTemplate>
                         </asp:Repeater>
                     </p>
-                    <a class="btn btn-primary mt-lg-5 mt-3 agile-link-bnr" href="#about" role="button">Learn More</a>
+                    <a class="btn btn-primary mt-lg-5 mt-3 agile-link-bnr" href="#about" role="button">HAKKIMDA</a>
                 </div>
             </div>
         </div>
@@ -92,68 +92,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- services -->
         <section class="services" id="services">
             <div class="container">
-                <h3 class="w3_head mb-4 text-left">Services</h3>
-                <p class="iner mt-md-5 text-left">Nunc fermentum adipiscing tempor cursus nascetur adipiscing adipiscing. Primis aliquam mus lacinia lobortis.Nunc fermentum adipiscing tempor cursus nascetur adipiscing adipiscing. </p>
+                <h3 class="w3_head mb-4 text-left">Yeteneklerim</h3>
+
                 <ul class="list-unstyled mt-5">
                     <li>
-                        <div class="row">
-                            <div class="col-2 ic-lft">
-                                <span class="fa fa-code"></span>
-                            </div>
-                            <div class="col-10">
-                                <h6>Fermentum adipiscing </h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-2 ic-lft">
-                                <span class="fa fa-cubes"></span>
-                            </div>
-                            <div class="col-10">
-                                <h6>Fermentum lobortis </h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-2 ic-lft">
-                                <span class="fa fa-book"></span>
-                            </div>
-                            <div class="col-10">
-                                <h6>Tristique ante </h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-2 ic-lft">
-                                <span class="fa fa-coffee"></span>
-                            </div>
-                            <div class="col-10">
-                                <h6>Nascetur adipiscing</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-2 ic-lft">
-                                <span class="fa fa-bolt"></span>
-                            </div>
-                            <div class="col-10">
-                                <h6>Primis aliquam mus</h6>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-2 ic-lft">
-                                <span class="fa fa-cog"></span>
-                            </div>
-                            <div class="col-10">
-                                <h6>Lobortis phasellus</h6>
-                            </div>
-                        </div>
+                        <asp:Repeater ID="Repeater6" runat="server">
+                            <ItemTemplate>
+                                <div class="row">
+                                    <div class="col-2 ic-lft">
+                                        <span class="fa fa-code"></span>
+                                    </div>
+                                    <div class="col-10" style="margin-bottom: 10px">
+                                        <h6><%#Eval("YETENEK") %> </h6>
+
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </li>
                 </ul>
             </div>
@@ -161,7 +116,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- //services -->
         <!-- news -->
         <div class="news" id="news">
-             <h3 class="w3_head mb-7">Deneyimlerim</h3>
+            <h3 class="w3_head mb-7">Deneyimlerim</h3>
             <p class="iner mt-md-3 text-left">
                 <asp:Repeater ID="Repeater3" runat="server">
                     <ItemTemplate>
@@ -173,42 +128,45 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="col-lg-3">
                     <asp:Repeater ID="Repeater4" runat="server">
                         <ItemTemplate>
-                            <img src=<%#Eval("IMAGE") %> alt="news image" class="img-fluid"><br />
+                            <img src='<%#Eval("IMAGE") %>' alt="news image" class="img-fluid"><br />
                         </ItemTemplate>
                     </asp:Repeater>
                 </div>
                 <div class="col-lg-9">
                     <asp:Repeater ID="Repeater5" runat="server">
                         <ItemTemplate>
-                            <h5><%#Eval("BASLIK") %><br /></h5>
+                            <h5><%#Eval("BASLIK") %><br />
+                            </h5>
                             <p class="mt-3">
-                              <br />  <%#Eval("ACIKLAMA") %>
+                                <br />
+                                <%#Eval("ACIKLAMA") %>
                             </p>
                         </ItemTemplate>
                     </asp:Repeater>
                 </div>
             </div>
         </div>
-     <%--   <h5 class="w3_head mb-2">Eğitim kıvılcımla ateş yakmaktır.</h5>--%>
+        <%--   <h5 class="w3_head mb-2">Eğitim kıvılcımla ateş yakmaktır.</h5>--%>
         <!-- //news -->
         <!-- contact -->
         <section class="wedo" id="contact">
-            <h3 class="w3_head mb-4 text-left">Contact Me</h3>
-            <p class="iner mt-md-5 text-left">Nunc fermentum adipiscing tempor cursus nascetur adipiscing adipiscing. Primis aliquam mus lacinia lobortis.Nunc fermentum adipiscing tempor cursus nascetur adipiscing adipiscing. </p>
+            <h3 class="w3_head mb-4 text-left">İLETİŞİM</h3>
+
             <div class="contact_grid_right mt-5 mx-auto text-left">
-                <form action="#" method="post">
+                <form action="#" method="post" runat="server">
                     <div class="row contact_top">
                         <div class="col-sm-6">
-                            <input type="text" name="Name" placeholder="Name" required="">
+                            <asp:TextBox ID="TextBox1" runat="server" placeHolder="Adınız"></asp:TextBox>
                         </div>
                         <div class="col-sm-6">
-                            <input type="email" name="Email" placeholder="Email" required="">
+                            <asp:TextBox ID="TextBox2" runat="server" placeHolder="Mail Adresiniz"></asp:TextBox>
                         </div>
                     </div>
-                    <input type="text" name="Name" placeholder="Name" required="">
-                    <textarea name="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-                    <button type="submit" class="btn">Send Message</button>
-                    <button type="reset" class="btn">Reset</button>
+                    <asp:TextBox ID="TextBox3" runat="server" placeHolder="Konu"></asp:TextBox>
+                    <asp:TextBox ID="TextBox4" runat="server" TextMode="MultiLine" placeHolder="Mesajınız..."></asp:TextBox>
+                    <asp:Button ID="Button1" runat="server" Text="Gönder" CssClass="btn btn-info" OnClick="Button1_Click" />
+                    <asp:Button ID="Button2" runat="server" Text="Vazgeç" CssClass="btn btn-warning" />
+
                     <div class="clearfix"></div>
                 </form>
             </div>
