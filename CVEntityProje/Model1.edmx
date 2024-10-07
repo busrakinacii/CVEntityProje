@@ -30,6 +30,8 @@
           <Property Name="BILGILER" Type="varchar" MaxLength="500" />
           <Property Name="EGITIM" Type="varchar" MaxLength="1000" />
           <Property Name="ISDENEYIMLERI" Type="varchar" MaxLength="1000" />
+          <Property Name="IMAGE" Type="varchar" MaxLength="500" />
+          <Property Name="UNVAN" Type="varchar" MaxLength="25" />
         </EntityType>
         <EntityType Name="TBLILETISIM">
           <Key>
@@ -95,6 +97,8 @@
           <Property Name="BILGILER" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="EGITIM" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
           <Property Name="ISDENEYIMLERI" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="IMAGE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="UNVAN" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TBLILETISIM">
           <Key>
@@ -159,6 +163,8 @@
           <EntitySetMapping Name="TBLHAKKIMDA">
             <EntityTypeMapping TypeName="DbCvEntityModel.TBLHAKKIMDA">
               <MappingFragment StoreEntitySet="TBLHAKKIMDA">
+                <ScalarProperty Name="UNVAN" ColumnName="UNVAN" />
+                <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="BILGILER" ColumnName="BILGILER" />
                 <ScalarProperty Name="EGITIM" ColumnName="EGITIM" />

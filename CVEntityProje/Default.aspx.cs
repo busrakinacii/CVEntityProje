@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.EnterpriseServices.CompensatingResourceManager;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -30,11 +31,28 @@ namespace CVEntityProje
             Repeater6.DataSource = db.TBLYETENEKLER.ToList();
             Repeater6.DataBind();
 
-        }
+            Repeater7.DataSource = db.TBLHAKKIMDA.ToList();
+            Repeater7.DataBind();
 
+        }
+        void clear()
+        {
+            TextBox1.Text = "";
+            TextBox2.Text = "";
+            TextBox3.Text = "";
+            TextBox4.Text = "";
+        }
         protected void Button1_Click(object sender, EventArgs e)
         {
-             
+            TBLILETISIM t = new TBLILETISIM();
+            t.ADSOYAD = TextBox1.Text;
+            t.MAIL = TextBox2.Text;
+            t.KONU = TextBox3.Text;
+            t.MESAJ = TextBox4.Text;
+            db.TBLILETISIM.Add(t);
+            db.SaveChanges();
+            clear();
+
         }
     }
 }

@@ -35,9 +35,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
     <div class="sidenav text-center">
         <div class="side_top">
-            <img src="web/images/about.jpg" alt="news image" class="img-fluid navimg">
-            <h1 class="top_hd mt-2"><a href="index.html">Conjoint</a></h1>
-            <p class="top_hdp mt-2">Fermentum lobortis non tristique ante proin sociis</p>
+            <asp:Repeater ID="Repeater7" runat="server">
+                <ItemTemplate>
+                    <img src="<%#Eval("IMAGE") %>"" alt="news image" class="img-fluid navimg">
+                    <h1 class="top_hd mt-2"><a href="index.html"><%#Eval("BILGILER") %></a></h1>
+                    <p class="top_hdp mt-2"><%#Eval("UNVAN") %></p>
+                </ItemTemplate>
+            </asp:Repeater>
         </div>
         <!-- header -->
         <header>
@@ -124,18 +128,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </ItemTemplate>
                 </asp:Repeater>
             </p>
+            <br />
             <div class="row news-grids-middle mt-7">
-                <div class="col-lg-3">
+             
                     <asp:Repeater ID="Repeater4" runat="server">
                         <ItemTemplate>
-                            <img src='<%#Eval("IMAGE") %>' alt="news image" class="img-fluid"><br />
+                       <div class="col-lg-3"> 
+                           <img src='<%#Eval("IMAGE") %>' alt="news image" class="img-fluid"><br /> 
+                       </div>
                         </ItemTemplate>
                     </asp:Repeater>
-                </div>
+               </div>
                 <div class="col-lg-9">
                     <asp:Repeater ID="Repeater5" runat="server">
                         <ItemTemplate>
-                            <h5><%#Eval("BASLIK") %><br />
+                           <br /><h5><%#Eval("BASLIK") %>
                             </h5>
                             <p class="mt-3">
                                 <br />
@@ -144,7 +151,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </ItemTemplate>
                     </asp:Repeater>
                 </div>
-            </div>
+            
         </div>
         <%--   <h5 class="w3_head mb-2">Eğitim kıvılcımla ateş yakmaktır.</h5>--%>
         <!-- //news -->
