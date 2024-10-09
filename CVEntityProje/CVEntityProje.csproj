@@ -77,7 +77,6 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Deneyimler.aspx" />
-    <Content Include="Hakkimda.aspx" />
     <Content Include="iletisim.aspx" />
     <Content Include="istatistik.aspx" />
     <Content Include="MesajDetay.aspx" />
@@ -187,13 +186,6 @@
     </Compile>
     <Compile Include="Deneyimler.aspx.designer.cs">
       <DependentUpon>Deneyimler.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Hakkimda.aspx.cs">
-      <DependentUpon>Hakkimda.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Hakkimda.aspx.designer.cs">
-      <DependentUpon>Hakkimda.aspx</DependentUpon>
     </Compile>
     <Compile Include="iletisim.aspx.cs">
       <DependentUpon>iletisim.aspx</DependentUpon>

@@ -2,97 +2,128 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <link href="web2/css/bootstrap.css" rel="stylesheet" type='text/css' />
-        <!-- Custom Theme files -->
-        <link href="web2/css/style.css" rel="stylesheet" type="text/css" media="all" />
-        <!-- Custom Theme files -->
-        <script src="web2/js/jquery.min.js"></script>
-        <link rel="stylesheet" href="web2/css/font-awesome.css">
-        <!-- Custom Theme files -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="web2/css/style.css" rel="stylesheet" />
+    <link href="web2/css/jqvmap.css" rel="stylesheet" />
+    <script src="web2/js/Chart1.js"></script>
+    <script src="web2/js/jquery.min.js"></script>
+    <script src="web2/js/jquery.vmap.js"></script>
+    <script src="web2/js/jquery.vmap.sampledata.js"></script>
+    <script src="web2/js/jquery.vmap.world.js"></script>
 
-        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: '#333333',
+                color: '#ffffff',
+                hoverOpacity: 0.7,
+                selectedColor: '#666666',
+                enableZoom: true,
+                showTooltip: true,
+                values: sample_data,
+                scaleColors: ['#C8EEFF', '#006491'],
+                normalizeFunction: 'polynomial'
+            });
+        });
+    </script>
 
-        <!-- Resource jQuery -->
-    </head>
-    <body>
-        <div class="total-content">
-            <div class="col-md-12 content">
-                <div class="home-strip">
-
-                    <div class="clearfix"></div>
-                </div>
-
-                <div class="list_of_members">
-                    <div class="sales">
-                        <div class="icon">
-                            <i class="dollar"></i>
-                        </div>
-                        <div class="icon-text">
-                            <h3>
-                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                            </h3>
-                            <p>Kasadaki Tutar</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="new-users">
-                        <div class="icon">
-                            <i class="user1"></i>
-                        </div>
-                        <div class="icon-text">
-                            <h3>
-                                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-                            </h3>
-                            <p>Toplam Üye</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="orders">
-                        <div class="icon">
-                            <i class="order"></i>
-                        </div>
-                        <div class="icon-text">
-                            <h3>
-                                <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
-                            </h3>
-                            <p>Toplam Üye</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="visitors">
-                        <div class="icon">
-                            <i class="visit"></i>
-                        </div>
-                        <div class="icon-text">
-                            <h3>
-                                <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
-                            </h3>
-                            <p>Ziyaretçi S.</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="visitors" style="margin-top:10px">
-                        <div class="icon">
-                            <i class="visit"></i>
-                        </div>
-                        <div class="icon-text">
-                            <h3>
-                                <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
-                            </h3>
-                            <p>Ziyaretçi S.</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-
+    <script>
+        $(document).ready(function (c) {
+            $('.alert-close6').on('click', function (c) {
+                $('.world-map').fadeOut('slow', function (c) {
+                    $('.world-map').remove();
+                });
+            });
+        });
+    </script>
+    <div class="list_of_members">
+        <div class="sales">
+            <div class="icon">
+                <i class="dollar"></i>
             </div>
-
+            <div class="icon-text">
+                <h3>
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h3>
+                <p>Toplam Yetenek</p>
+            </div>
+            <div class="clearfix"></div>
         </div>
-    </body>
-    </html>
+        <div class="new-users">
+            <div class="icon">
+                <i class="user1"></i>
+            </div>
+            <div class="icon-text">
+                <h3>
+                    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label></h3>
+                <p>Gelen Mesaj Sayısı</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="orders">
+            <div class="icon">
+                <i class="order"></i>
+            </div>
+            <div class="icon-text">
+                <h3>
+                    <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label></h3>
+                <p>Ortalama Derece Puanı</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="visitors">
+            <div class="icon">
+                <i class="visit"></i>
+            </div>
+            <div class="icon-text">
+                <h3>
+                    <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label></h3>
+                <p>En Yüksek Derece</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+
+
+    <div class="total-world">
+        <div class="world-map">
+            <div class="alert-close6"></div>
+            <h3>Dünya Haritası</h3>
+            <p><span class="color1"></span>40%<span class="color2"></span>12%<span class="color3"></span>11%<span class="color4"></span>10%<span class="color5"></span>18%</p>
+            <div class="clearfix"></div>
+            <div id="vmap" style="width: 600px; height: 400px;"></div>
+        </div>
+        <div class="site-report">
+            <div class="alert-close3"></div>
+            <h3>Sistem Raporları</h3>
+            <div class="skills-top">
+                <h5>Memnuniyet</h5>
+                <h4>96%</h4>
+                <div class="clearfix"></div>
+                <div class="skills">
+                    <div class="skill" style="width: 96%"></div>
+                </div>
+            </div>
+            <div class="skills-top">
+                <h5>Güvenilirlik</h5>
+                <h4>89%</h4>
+                <div class="clearfix"></div>
+                <div class="skills">
+                    <div class="skill1" style="width: 89%"></div>
+                </div>
+            </div>
+            <div class="skills-top">
+                <h5>Haftalık Geri Dönüş</h5>
+                <h4>76%</h4>
+                <div class="clearfix"></div>
+                <div class="skills">
+                    <div class="skill2" style="width: 76%"></div>
+                </div>
+            </div>
+            <p>Entity Cv projemizin admin paneli kısmındasınız. Keyifli Kodlamalar dileriz.</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
 </asp:Content>
