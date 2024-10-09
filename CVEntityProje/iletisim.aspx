@@ -20,7 +20,7 @@
                     <td><%#Eval("KONU") %></td>
                     <td>
 
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%#"iletisim.aspx?ID="+Eval("ID") %>' CssClass="btn btn-warning" BorderColor="#FF5050" BackColor="#FF99CC">Mesajı Gör</asp:HyperLink></td>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%#"MesajDetay.Aspx?ID="+Eval("ID") %>' CssClass="btn btn-warning" BorderColor="#FF5050" BackColor="#FF99CC">Mesajı Gör</asp:HyperLink></td>
 
                 </tr>
 

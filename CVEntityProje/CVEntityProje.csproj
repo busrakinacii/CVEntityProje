@@ -79,6 +79,8 @@
     <Content Include="Deneyimler.aspx" />
     <Content Include="Hakkimda.aspx" />
     <Content Include="iletisim.aspx" />
+    <Content Include="istatistik.aspx" />
+    <Content Include="MesajDetay.aspx" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -90,6 +92,47 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="Web.config" />
+    <Content Include="web2\css\bootstrap.css" />
+    <Content Include="web2\css\clndr.css" />
+    <Content Include="web2\css\jqvmap.css" />
+    <Content Include="web2\css\nav.css" />
+    <Content Include="web2\css\style.css" />
+    <Content Include="web2\images\ar2.png" />
+    <Content Include="web2\images\arrows.png" />
+    <Content Include="web2\images\avatar.jpg" />
+    <Content Include="web2\images\avatar1.jpg" />
+    <Content Include="web2\images\avatar2.jpg" />
+    <Content Include="web2\images\img-sprite.png" />
+    <Content Include="web2\images\into.png" />
+    <Content Include="web2\images\into1.png" />
+    <Content Include="web2\images\logo.png" />
+    <Content Include="web2\images\pp.jpg" />
+    <Content Include="web2\images\pp0.jpg" />
+    <Content Include="web2\images\pp01.jpg" />
+    <Content Include="web2\images\settings.png" />
+    <Content Include="web2\images\tick-mark.png" />
+    <Content Include="web2\index.html" />
+    <Content Include="web2\js\Chart1.js" />
+    <Content Include="web2\js\clndr.js" />
+    <Content Include="web2\js\easyResponsiveTabs.js" />
+    <Content Include="web2\js\jquery.easydropdown.js" />
+    <Content Include="web2\js\jquery.min.js" />
+    <Content Include="web2\js\jquery.nicescroll.js" />
+    <Content Include="web2\js\jquery.vmap.js" />
+    <Content Include="web2\js\jquery.vmap.sampledata.js" />
+    <Content Include="web2\js\jquery.vmap.world.js" />
+    <Content Include="web2\js\main.js" />
+    <Content Include="web2\js\moment-2.2.1.js" />
+    <Content Include="web2\js\site.js" />
+    <Content Include="web2\js\underscore-min.js" />
+    <Content Include="web2\resimler\book1.jpg" />
+    <Content Include="web2\resimler\book2.jpg" />
+    <Content Include="web2\resimler\book3.jpg" />
+    <Content Include="web2\resimler\book4.jpg" />
+    <Content Include="web2\resimler\book5.jpg" />
+    <Content Include="web2\resimler\img1.jpg" />
+    <Content Include="web2\w3layouts-License.txt" />
+    <Content Include="web2\Yeni Metin Belgesi.txt" />
     <Content Include="web\css\bootstrap.css" />
     <Content Include="web\css\easy-responsive-tabs.css" />
     <Content Include="web\css\font-awesome.css" />
@@ -158,6 +201,20 @@
     </Compile>
     <Compile Include="iletisim.aspx.designer.cs">
       <DependentUpon>iletisim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="istatistik.aspx.cs">
+      <DependentUpon>istatistik.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="istatistik.aspx.designer.cs">
+      <DependentUpon>istatistik.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MesajDetay.aspx.cs">
+      <DependentUpon>MesajDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MesajDetay.aspx.designer.cs">
+      <DependentUpon>MesajDetay.aspx</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
