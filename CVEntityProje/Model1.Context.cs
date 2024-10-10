@@ -31,5 +31,6 @@ namespace CVEntityProje
         public virtual DbSet<TBLILETISIM> TBLILETISIM { get; set; }
         public virtual DbSet<TBLYETENEKLER> TBLYETENEKLER { get; set; }
         public virtual DbSet<TBLRESIM> TBLRESIM { get; set; }
+        public virtual DbSet<TBLADMIN> TBLADMIN { get; set; }
     }
 }

@@ -11,6 +11,7 @@
         <EntityTypeShape EntityType="DbCvEntityModel.TBLILETISIM" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbCvEntityModel.TBLYETENEKLER" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbCvEntityModel.TBLRESIM" Width="1.5" PointX="4.875" PointY="3.75" />
+        <EntityTypeShape EntityType="DbCvEntityModel.TBLADMIN" Width="1.5" PointX="7.25" PointY="2.375" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

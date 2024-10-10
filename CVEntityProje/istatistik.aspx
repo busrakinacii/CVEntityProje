@@ -126,4 +126,18 @@
         <div class="clearfix"></div>
     </div>
 
+    <div class="list_of_members">
+        <div class="sales">
+            <div class="icon">
+                <i class="dollar"></i>
+            </div>
+            <div class="icon-text">
+                <h3>
+                    <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label></h3>
+                <p>En Yüksek Dereceli Yetenek Adı</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
 </asp:Content>
